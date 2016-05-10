@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <title>chapter4</title>
+</head>
+<body>
+  <script type="text/javascript">
+  <!--
+  var scope = 'Global Variable';
+
+  function checkScope(){
+    var scope = 'Loval Variable';
+    var f_lit = function() { return scope; };
+    document.writeln(f_lit());
+
+    var f_con = new Function('return scope;');
+    document.writeln(f_con());
+  }
+  checkScope();
+  //-->
+  </script>
+</body>
+</html>
