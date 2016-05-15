@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <title>chapter4</title>
+</head>
+<body>
+  <script type="text/javascript">
+  <!--
+  function initializeBase(derive, base, baseArgs){
+    base.apply(derive, baseArgs);
+    for(prop in base.prototype){
+      var proto = derive.constructor.prototype;
+      if(!proto[prop]){
+        proto[prop] = base.prototype[prop];
+      }
+    }
+  }
+
+  var Member = function(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+  };
+
+  Member.prototype.getName = function(){
+    return this.lastName + ' ' + this.firstName;
+  };
+
+  var SpecialMember = function(firstName, lastName, role){
+    initializeBase(this, Member, [firstName, lastName]);
+    this.role = role;
+  };
+
+  SpecialMember.prototype.isAdministrator = function() {
+    return (this.role === 'Administrator');
+  };
+
+  var mem = new SpecialMember('Lennon', 'John', 'Administrator');
+  document.writeln('Name:' +  mem.getName());
+  document.writeln('administrator:' + mem.isAdministrator());
+  //-->
+  </script>
+</body>
+</html>

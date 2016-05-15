@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <title>chapter4</title>
+</head>
+<body>
+  <script type="text/javascript">
+  <!--
+  var Animal = function() {};
+
+  Animal.prototype = {
+    walk: function() { document.writeln('トコトコ・・・'); }
+  };
+
+  var SuperAnimal = function() {};
+  SuperAnimal.prototype = {
+    walk: function() { document.writeln('ダダダダダダ！'); }
+  };
+
+  var Dog = function() {};
+  Dog.prototype = new Animal();
+  var d1 = new Dog();
+  d1.walk();
+  Dog.prototype = new SuperAnimal();
+  var d2 = new Dog();
+  d1.walk();
+  d2.walk();
+  //-->
+  </script>
+</body>
+</html>
