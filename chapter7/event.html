@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <title>chapter7</title>
+</head>
+<body>
+  <script type="text/javascript">
+  <!--
+  function addListener(elem, ev, listener){
+    if(elem.addEventListener){
+      elem.addEventListener(ev, listener, false);
+    } else if(elem.attachEvent) {
+      elem.attachEvent('on' + ev.listener);
+    } else {
+      throw new Error('イベントリスナに未対応です。');
+    }
+  }
+
+  function removeListener(elem, ev, listener){
+    if(elem.removeEventListener){
+      elem.removeEventListener(ev, listener, false);
+    }else if(elem.detachEvent){
+      elem.detachEvent('on' + ev, listener);
+    }else{
+      throw new Error('イベントリスナに未対応です。');
+    }
+  }
+
+  addListener(window, 'load', init);
+
+  function init(){
+    addListener(document.getElementById('logo'), 'mousedown',
+    function(e){
+
+      var result = [];
+      result.push('発生元: ' + getSource(e).id);
+      result.push('イベント: ' + e.type);
+      result.push('ボタン: ' + getButtonType(e));
+      result.push('X座標: ' + e.clientX);
+      result.push('Y座標: ' + e.clientY);
+      window.alert(result.join('\n'));
+    });
+  }
+
+  function getSource(e){
+    if(e.target){
+      return e.target;
+    }else{
+      return window.event.srcElement;
+    }
+  }
+
+  function getButtonType(e){
+    if(e.target){
+      switch (e.button) {
+        case 0:return 'left';
+        case 1:return 'center';
+        case 2:return 'right';
+      }
+    }else if(window.event){
+      switch(window.event.button){
+        case 1:return 'left';
+        case 2:return 'right';
+        case 4:return 'center';
+      }
+    }
+  }
+  //-->
+  </script>
+  <img src="./logo.jpg" id="logo" />
+</body>
+</html>
