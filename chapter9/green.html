@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+  <title>chapter9</title>
+  <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+  <style type="text/css">
+  <!--
+  .hoge2A{
+    background-color:#fff;
+  }
+  -->
+  </style>
+</head>
+<body>
+  <div class="hoge2A">
+    this is blue.
+  </div>
+  <script>
+  $(function(){
+	   $(".hoge2A").click(function(){
+		     $(this).css("background-color","green")
+	  });
+  });
+  </script>
+</body>
+</html>
